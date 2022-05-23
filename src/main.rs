@@ -1,6 +1,11 @@
+#![warn(clippy::all, clippy::pedantic)]
+
 fn main() {
     // hello world
     println!("Hello, Rust!");
+
+    // string interpolation
+    println!("Hello {}!", "Jeff")
 
     // declare variables
 
