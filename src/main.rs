@@ -28,8 +28,51 @@ fn main() {
     let mut z = 10;
     z = 200;
 
+    // shadow variables - can overwrite without mut by referencing original
+    let m = 10;
+    let m = m + 1;
+
+    // shadow variables can change type
+    let abc = "ABC";
+    let abc = abc.len();
+
+    // constants - require explicit type
+    const PI: f32 = 3.14;
+
     // types
+    // signed integers - i8, i16, i32, i64, i128, isize
+    // unsigned integers - u8, u16, u32, u64, u128, usize
+    // isize and usize default to the processor's amount
+    let x64: i64 = 123456;
+
+    // floats - f32 and f64, determined automatically at f64 if not specified
+    let a = 2.0;
+    let b: f32 = 1.0;
+
+    // single chars with single quotes
+    let c = 'C';
+
     // str and String, similar to Java's primitives vs Wrapper classes
+    let mut my_string = String::from("Hello");
+    my_string.push(' ');
+    my_string.push_str("world");
+    my_string.insert(5, ',');
+    my_string.is_empty();
+    my_string.len();
+
+    // tuples - different types but fixed length
+    let tup: (i32, f64, u8, f32) = (500, 6.4, 1, 29.29);
+    // type inference works
+    let tup2 = (5.5, 200);
+
+    // destructuring
+    let (f, g) = tup2;
+
+    // arrays, same type and fixed length
+    let arr = [1,2,3,4,5];
+    // create array with length of three and default all to 0
+    let emptyArr = [0; 3];
+
 
     // check types
 
@@ -44,6 +87,12 @@ fn main() {
     }
 
     // declare function
+    fn my_func(name: &str) {
+        println!("my name is {}", name);
+    }
+    my_func("Jeff");
+
+    // currying
 
     // declare Rust equivalent of a class / object
 
