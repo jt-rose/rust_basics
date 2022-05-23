@@ -99,7 +99,17 @@ fn main() {
     }
     my_func("Jeff");
 
+    // if function returns a value, declare the return value
+    fn double(num: i32) -> i32 {
+        num * 2
+    }
+
     // currying
+    fn add(a: u32, b: u32) -> u32 {
+        a + b
+    }
+
+    let add5 = move |x| add(5, x);
 
     // declare Rust equivalent of a class / object
 
