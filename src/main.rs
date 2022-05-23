@@ -112,6 +112,7 @@ fn main() {
             _ => factorial(num - 1) * num,
         }
     }
+    println!("factorial of 5 is {}", factorial(5));
 
     // currying
     fn add(a: u32, b: u32) -> u32 {
@@ -139,6 +140,25 @@ fn main() {
     for n in nums {
         println!("{}", n);
     }
+
+    // with ongoing loop
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+        if counter == 10 {
+            // can break and add further calculation before return
+            break counter * 2;
+        }
+    };
+
+    // while loop
+    counter = 3;
+    while counter != 0 {
+        println!("{}", counter);
+        counter -= 1;
+    }
+
+
 
     // functional streams
 
