@@ -15,6 +15,7 @@ fn main() {
 
     // string interpolation
     println!("Hello {}!", "Jeff");
+    println!("Here are named variables x: {x} and y: {y}", x=99, y=0);
 
     // declare variables
     // immutable by default (yay!), opt into mutability with "mut" keyword
