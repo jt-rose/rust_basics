@@ -16,6 +16,10 @@ fn main() {
     // string interpolation
     println!("Hello {}!", "Jeff");
     println!("Here are named variables x: {x} and y: {y}", x=99, y=0);
+    // print with debugging info (for example, show format of variable such as array ()
+    println!("debug: {:?}", (3,4));
+    // print while defining order of arguments from 0,1,2...
+    println!("First is {1} and Second is {0}", "B", "A");
 
     // declare variables
     // immutable by default (yay!), opt into mutability with "mut" keyword
