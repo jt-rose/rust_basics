@@ -73,6 +73,13 @@ fn main() {
     // create array with length of three and default all to 0
     let emptyArr = [0; 3];
 
+    // variable declarations can include multiline calculations with {}
+    // by leaving a ; off of the final line it will automatically return the value
+    let calculated_var = {
+        let num1 = 2;
+        num1 * num1
+    };
+
 
     // check types
 
