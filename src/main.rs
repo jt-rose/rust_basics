@@ -1,4 +1,5 @@
 #![warn(clippy::all, clippy::pedantic)]
+use std::io::stdin;
 
 fn main() {
     // hello world
@@ -6,11 +7,21 @@ fn main() {
 
     // capture user input
     let mut my_name = String::new();
+    stdin()
+        .read_line(&mut my_name)
+        .expect("failed to read line");
+
+    println!("{}", my_name);
 
     // string interpolation
     println!("Hello {}!", "Jeff");
 
     // declare variables
+    // immutable by default (yay!), opt into mutability with "mut" keyword
+    let x = 7;
+    let y = 9;
+    let mut z = 10;
+    z = 200;
 
     // types
     // str and String, similar to Java's primitives vs Wrapper classes
@@ -32,7 +43,7 @@ fn main() {
     // declare Rust equivalent of a class / object
 
     // for loops / iterators
-    let nums = [1,2,3];
+    let nums = [1, 2, 3];
 
     // ---> explicit amount of rounds 0 through 9 (stop at 10)
     for i in 0..3 {
@@ -53,9 +64,7 @@ fn main() {
 
     // arrays / vectors
     // ---> arrays, fixed length and store same type
-    let my_numbers = [1,2,3];
-
-
+    let my_numbers = [1, 2, 3];
 
     // array CRUD
 
